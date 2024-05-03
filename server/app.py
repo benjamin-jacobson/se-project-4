@@ -4,7 +4,7 @@ from Flask import Flask, jsonify, make_response
 from flask_migrate import flask_migrate
 from flask_restful import Api, Resource
 
-from models import db, HelloWorld
+from models import db, Users
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')

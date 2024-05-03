@@ -1,3 +1,7 @@
+# Readme
+
+# Initial Terminal History Dump Showcasing Pure Lazizness
+
 cd Development/code/phase-4/
  2002  mkdir project-4
  2003  cd $_
@@ -12,3 +16,6 @@ cd Development/code/phase-4/
  2012  code .
  2013  touch server/models.py
  2014  touch README.md
+
+ # Resources and Reference Materials
+ - https://learning.flatironschool.com/courses/6551/pages/deploying-a-flask-api-to-render?module_item_id=558508
