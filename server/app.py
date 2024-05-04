@@ -18,7 +18,7 @@ db.init_app(app)
 api = Api(app)
 
 class Users(Resource):
-    
+
     def get(self):
         users = [u.to_dict() for u in User.query.all()]
         return make_response(jsonify(users),200)
