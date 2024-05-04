@@ -1,6 +1,3 @@
-# TODO initial data
-# TODO set render db uri env var
-
 from app import app
 from models import db, User
 

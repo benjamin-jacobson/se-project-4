@@ -22,4 +22,4 @@ class Users(Resource):
         users = [u.to_dict() for u in User.query.all()]
         return make_response(jsonify(users),200)
 
-api.add_resource(User, '/users')
+api.add_resource(Users, '/users')
