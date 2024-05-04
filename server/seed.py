@@ -1,5 +1,5 @@
-from app import app
-from models import db, User
+from server.app import app
+from server.models import db, User
 
 with app.app_context():
     print('Deleting existing users...')
