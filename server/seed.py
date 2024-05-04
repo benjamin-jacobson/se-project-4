@@ -9,10 +9,10 @@ with app.app_context():
     User.query.delete()
 
     print('Creating user objects...')
-    u1 = Users(name = "Bob", greeting = "Hey!")
-    u2 = Users(name = "Mike", greeting = "Hola!")
-    u3 = Users(name = "Sue", greeting = "Bonjour!")
-    u4 = Users(name = "Jane", greeting = "Hello!")
+    u1 = User(name = "Bob", greeting = "Hey!")
+    u2 = User(name = "Mike", greeting = "Hola!")
+    u3 = User(name = "Sue", greeting = "Bonjour!")
+    u4 = User(name = "Jane", greeting = "Hello!")
 
     print('Adding user objects to transaction')
     db.session.add_all([u1, u2, u3, u4])

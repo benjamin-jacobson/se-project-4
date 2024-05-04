@@ -15,5 +15,5 @@ class User(db.Model, SerializerMixin):
 
     
 if __name__ == "__main__":
-    u = Users(name = "test_name", greeting = "test_greeting")
+    u = User(name = "test_name", greeting = "test_greeting")
     print(u)
