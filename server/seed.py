@@ -1,0 +1,23 @@
+# TODO initial data
+# TODO set render db uri env var
+
+from app import app
+from models import db, User
+
+with app.app_context():
+    print('Deleting existing users...')
+    User.query.delete()
+
+    print('Creating user objects...')
+    u1 = Users(name = "Bob", greeting = "Hey!")
+    u2 = Users(name = "Mike", greeting = "Hola!")
+    u3 = Users(name = "Sue", greeting = "Bonjour!")
+    u4 = Users(name = "Jane", greeting = "Hello!")
+
+    print('Adding user objects to transaction')
+    db.session.add_all([u1, u2, u3, u4])
+
+    print('Committing transaction...')
+    db.session.commit()
+
+    print('Comlplete.')
