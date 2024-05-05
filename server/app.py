@@ -6,7 +6,16 @@ from flask_restful import Api, Resource
 
 from server.models import db, User
 
-app = Flask(__name__)
+# from dotenv import load_dotenv
+# load_dotenv()
+
+# app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_url_path='',
+    static_folder='../client/build',
+    template_folder='../client/build'
+)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
@@ -24,3 +33,9 @@ class Users(Resource):
         return make_response(jsonify(users),200)
 
 api.add_resource(Users, '/users')
+
+
+# @app.route('/')
+# @app.route('/<int:id>')
+# def index(id=0):
+#     return render_template("index.html")
