@@ -1,8 +1,24 @@
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function UserPage() {
-    return <h1> Hello, Beautiful World</h1>
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("/users")
+    .then((r) => r.json())
+    .then((usersArray) => {
+      setUsers(usersArray);
+    });
+  }, [])
+
+    return (
+      <ul>
+        {users.map((u) => {
+          return <h1>{u.greeting}</h1>;
+        })}
+      </ul>
+    )
   }
   
-  export default UserPage;
+export default UserPage;
