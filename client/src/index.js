@@ -16,18 +16,34 @@
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
+// // Routing v1 use this later
+// import React from "react";
+// import ReacDOM from 'react-dom/client';
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// import Home from "./pages/Home";
+
+// const router = createBrowserRouter([
+//   {
+//     path:"/",
+//     element: <Home />
+//   }
+// ]);
+
+// const root = ReacDOM.createRoot(document.getElementById("root"));
+// root.render(<Home />)
+
 import React from "react";
-import ReacDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./components/App";
+import { BrowserRouter } from "react-router-dom";
 
-import Home from "./pages/Home";
-
-const router = createBrowserRouter([
-  {
-    path:"/",
-    element: <Home />
-  }
-]);
-
-const root = ReacDOM.createRoot(document.getElementById("root"));
-root.render(<Home />)
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById("root")
+);

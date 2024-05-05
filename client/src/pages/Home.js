@@ -1,8 +1,8 @@
-import {useState, useEffect} from "react";
+// import {useState, useEffect} from "react";
 // import UserCard from "../components/UserCard";
 
 function Home() {
-  const [users, setUsers] = useState([])
+  // const [users, setUsers] = useState([])
 
   // useEffect(() => {
   //   fetch("htt")

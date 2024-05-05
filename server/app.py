@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, jsonify, make_response
+from flask import Flask, jsonify, make_response, render_template
 from flask_migrate import Migrate
 from flask_restful import Api, Resource
 
@@ -16,6 +16,7 @@ app = Flask(
     static_folder='../client/build',
     template_folder='../client/build'
 )
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
@@ -34,8 +35,8 @@ class Users(Resource):
 
 api.add_resource(Users, '/users')
 
-
-# @app.route('/')
-# @app.route('/<int:id>')
-# def index(id=0):
-#     return render_template("index.html")
+# read this for below explanation https://github.com/learn-co-curriculum/python-p4-deploying-flask-react-app-to-render
+@app.route('/')
+@app.route('/<int:id>')
+def index(id=0):
+    return render_template("index.html")

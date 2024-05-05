@@ -23,5 +23,8 @@ cd Development/code/phase-4/
 
  Starting the local server at root: npm start --prefix client
 
+ - now with honco pip install honcho
+ to run locally honcho start -f Procfile.dev
+
  # Resources and Reference Materials
  - https://learning.flatironschool.com/courses/6551/pages/deploying-a-flask-api-to-render?module_item_id=558508
