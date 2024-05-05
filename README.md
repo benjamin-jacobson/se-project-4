@@ -33,3 +33,8 @@ cd Development/code/phase-4/
  - https://learning.flatironschool.com/courses/6551/pages/deploying-a-flask-api-to-render?module_item_id=558508
 
  - https://github.com/learn-co-curriculum/python-p4-deploying-flask-react-app-to-render
+
+
+ Updating python pipenv (can't just pip install, need pipenv install)
+  2155  pipenv install python-dotenv
+ 2156  pipenv requirements > requirements.txt

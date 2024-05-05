@@ -1,8 +1,18 @@
 import { Routes, Route } from "react-router-dom";
+import UserPage from "./UserPage";
 
 
 function App() {
-    return <h1> Hello, Beautiful World</h1>
-  }
+
+  return (
+    <>
+      <main>
+        <Routes>
+          <Route path="/" element={ <UserPage /> }/>
+        </Routes>
+      </main>
+    </>
+  );
+}
   
   export default App;
