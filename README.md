@@ -26,5 +26,10 @@ cd Development/code/phase-4/
  - now with honco pip install honcho
  to run locally honcho start -f Procfile.dev
 
+ - To run on build production version of app (npm run build --prefix client)
+ gunicorn --chdir server app:app
+
  # Resources and Reference Materials
  - https://learning.flatironschool.com/courses/6551/pages/deploying-a-flask-api-to-render?module_item_id=558508
+
+ - https://github.com/learn-co-curriculum/python-p4-deploying-flask-react-app-to-render
