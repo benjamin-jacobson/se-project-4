@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/NavBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+function App(){
+    const [users, setUsers] = useState([]);
 
-export default App;
+    useEffect(() =>{
+        fetch("http://localhost:4000/users")
+        .then(r => r.json())
+        .then(data => setUsers(data))
+        .catch(error => console.error(error));
+    }, []);
+
+    return(
+        <>
+            <header>
+                <NavBar />
+            </header>
+            <Outlet context={users}/>
+        </>
+    );
+};
+
+export default App

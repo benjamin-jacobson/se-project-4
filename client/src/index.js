@@ -33,17 +33,28 @@
 // const root = ReacDOM.createRoot(document.getElementById("root"));
 // root.render(<Home />)
 
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./components/App";
-import { BrowserRouter } from "react-router-dom";
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import "./index.css";
+// import App from "./components/App";
+// import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import routes from "./routes.js";
+import "./index.css"
+
+const router = createBrowserRouter(routes);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={router} />);

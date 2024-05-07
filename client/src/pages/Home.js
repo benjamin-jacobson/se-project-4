@@ -1,17 +1,18 @@
-// import {useState, useEffect} from "react";
-// import UserCard from "../components/UserCard";
+// Home.js
+import { Outlet, useOutletContext } from "react-router-dom";
+import UserCard from "../components/UserCard";
 
-function Home() {
-  // const [users, setUsers] = useState([])
+function Home(){
+    const users = useOutletContext();
+    const userList = users.map(user => <UserCard key={user.id} user={user}/>);
 
-  // useEffect(() => {
-  //   fetch("htt")
-  // }
-
-  // )
-  return <h1> Hello, Beautiful World</h1>
-
-
-}
+  return (
+      <main>
+        <h1>Home!</h1>
+        <Outlet context={users}/>
+        {userList}
+      </main>
+  );
+};
 
 export default Home;

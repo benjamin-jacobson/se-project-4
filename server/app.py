@@ -5,9 +5,10 @@ from flask_migrate import Migrate
 from flask_restful import Api, Resource
 
 from server.models import db, User
+# from models import db, User
 
-# from dotenv import load_dotenv
-# load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 # app = Flask(__name__)
 app = Flask(

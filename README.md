@@ -38,3 +38,6 @@ cd Development/code/phase-4/
  Updating python pipenv (can't just pip install, need pipenv install)
   2155  pipenv install python-dotenv
  2156  pipenv requirements > requirements.txt
+
+ # Nested routes 
+ https://github.com/learn-co-curriculum/react-hooks-react-router-nested-routes-v6
